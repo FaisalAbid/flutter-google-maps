@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MapsActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity android:name=".MapsActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDtr6ox7vPs4srfwBCJ2saRp3s1K9x2WEQ"/>
     </application>
