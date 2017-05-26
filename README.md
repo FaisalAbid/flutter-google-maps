@@ -1,8 +1,5 @@
-# fluttermaps
+# Google maps and Flutter intergration (Android only, Maps launches in Activity)
 
-A new flutter project.
+Launch a google maps activity and pass in cordinates
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
+Todo: pass information back to flutter
