@@ -38,8 +38,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(new LatLng(getIntent().getDoubleExtra("lat", 0), getIntent().getDoubleExtra("long", 0)))      // Sets the center of the map to location user
                 .zoom(17)                   // Sets the zoom
-                .bearing(90)                // Sets the orientation of the camera to east
-                .tilt(40)                   // Sets the tilt of the camera to 30 degrees
                 .build();                   // Creates a CameraPosition from the builder
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
