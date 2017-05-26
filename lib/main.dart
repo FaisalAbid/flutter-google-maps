@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 void main() {
   runApp(new MyApp());
 }
@@ -39,25 +40,24 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   static const MethodChannel methodChannel = const MethodChannel('com.faisalabid/maps');
   void _launchMaps() {
-     methodChannel.invokeMethod('launchMaps');
+    methodChannel.invokeMethod('launchMaps', {"lat": 37.4219999, "long": -122.0840575});
   }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-      ),
-      body: new Center(
-        child: new Text(
-          'Tap Floating Button to launch maps',
+        appBar: new AppBar(
+          title: new Text(widget.title),
         ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _launchMaps,
-        tooltip: 'Launch Maps',
-        child: new Icon(Icons.map),
-      )
-    );
+        body: new Center(
+          child: new Text(
+            'Tap Floating Button to launch maps',
+          ),
+        ),
+        floatingActionButton: new FloatingActionButton(
+          onPressed: _launchMaps,
+          tooltip: 'Launch Maps',
+          child: new Icon(Icons.map),
+        ));
   }
 }
